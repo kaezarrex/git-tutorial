@@ -1,0 +1,13 @@
+---
+layout: default
+title: Git Tutorial
+---
+
+{% for post in site.posts %}
+<a href="#{{ post.id }}">{{ post.title }}</a>
+{% endfor %}
+
+{% for post in site.posts %}
+<h2 id="{{ post.id }}">{{ post.title }}</h2>
+{{ post.content }}
+{% endfor %}
