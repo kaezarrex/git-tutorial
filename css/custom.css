@@ -2,3 +2,8 @@ code {
     background-color: transparent;
     padding: 0px;
 }
+
+#nav {
+    position: fixed;
+    margin-left: 760px;
+}
