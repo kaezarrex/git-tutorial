@@ -6,7 +6,7 @@ title: Git Tutorial
 <div class="row">
 
     <div class="span12">
-        {% for post in site.posts %}
+        {% for post in site.posts reversed %}
         <h2 id="{{ post.id }}">{{ post.title }}</h2>
         {{ post.content }}
         <blockquote><small>Source: <a href="{{ post.source }}">{{ post.source }}</a></small></blockquote>
@@ -15,7 +15,7 @@ title: Git Tutorial
 
     <div id="nav" class="span3 well">
         <ol>
-            {% for post in site.posts %}
+            {% for post in site.posts reversed %}
             <li><strong><a href="#{{ post.id }}">{{ post.title }}</a></strong></li>
             {% endfor %}
         </ol>
