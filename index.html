@@ -7,18 +7,26 @@ title: Git Tutorial
 
     <div class="span12">
         {% for post in site.posts reversed %}
-        <h2 id="{{ post.id }}">{{ post.title }}</h2>
-        {{ post.content }}
-        <blockquote><small>Source: <a href="{{ post.source }}">{{ post.source }}</a></small></blockquote>
+        <article id="{{ post.id }}">
+            <header>
+                <h2>{{ post.title }}</h2>
+            </header>
+            <section>
+                {{ post.content }}
+            </section>
+            <footer>
+                <blockquote><small>Source: <a href="{{ post.source }}">{{ post.source }}</a></small></blockquote>
+            </footer>
+        </article>
         {% endfor %}
     </div>
 
-    <div id="nav" class="span3 well">
+    <nav id="nav" class="span3 well">
         <ol>
             {% for post in site.posts reversed %}
             <li><strong><a href="#{{ post.id }}">{{ post.title }}</a></strong></li>
             {% endfor %}
         </ol>
-    </div>
+    </nav>
 
 </div>
