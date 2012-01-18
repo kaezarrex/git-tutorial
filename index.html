@@ -3,11 +3,22 @@ layout: default
 title: Git Tutorial
 ---
 
-{% for post in site.posts %}
-<a href="#{{ post.id }}">{{ post.title }}</a>
-{% endfor %}
+<div class="row">
 
-{% for post in site.posts %}
-<h2 id="{{ post.id }}">{{ post.title }}</h2>
-{{ post.content }}
-{% endfor %}
+    <div class="span12">
+        {% for post in site.posts %}
+        <h2 id="{{ post.id }}">{{ post.title }}</h2>
+        {{ post.content }}
+        <blockquote><small>Source: <a href="{{ post.source }}">{{ post.source }}</a></small></blockquote>
+        {% endfor %}
+    </div>
+
+    <div class="span3 well" style="position: fixed; left: 938px;">
+        <ol>
+            {% for post in site.posts %}
+            <li><strong><a href="#{{ post.id }}">{{ post.title }}</a></strong></li>
+            {% endfor %}
+        </ol>
+    </div>
+
+</div>
