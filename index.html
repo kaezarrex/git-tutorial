@@ -15,7 +15,9 @@ title: Git Tutorial
                 {{ post.content }}
             </section>
             <footer>
+                {% if post.source %}
                 <blockquote><small>Source: <a href="{{ post.source }}">{{ post.source }}</a></small></blockquote>
+                {% endif %}
             </footer>
         </article>
         {% endfor %}
