@@ -1,5 +1,5 @@
 article {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 blockquote p {
@@ -8,11 +8,11 @@ blockquote p {
 }
 
 code {
-    background-color: transparent;
-    padding: 0px;
+    border: none;
+    color: #333;
 }
 
 #nav {
     position: fixed;
-    margin-left: 760px;
+    margin-left: 700px;
 }
